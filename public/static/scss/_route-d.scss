@@ -1,0 +1,84 @@
+@import 'base';
+.route_detail{
+  height:420px;
+  .row{
+    height:250px;
+    #route_intro{
+      padding-right:40px;
+    }
+    #guide_pic{
+      padding:20px 0 0 20px;
+      overflow: hidden;
+      img{
+        width:200px;height:200px;
+        transition: all 1.5s;
+        &:hover{
+          transform:scale(1.1);
+        }
+      }
+    }
+    .guide_intro{
+      width:60%;
+      padding:10px 0 0 40px;
+      #guide_name{margin:20px 0;}
+      .long-gray-line{
+        display: block;
+        width:100%;
+        height:1px;
+        background:$gray;
+        margin-bottom:3px;
+      }
+    }
+  }
+}
+.route_info{
+  height:350px;
+  background: url('../images/route/bg_d.png') no-repeat 0 -200px fixed;
+  .row{
+    height:120px;
+    .col{
+      color:#fff;
+      >p:first-child{
+        padding-bottom: 25px;
+        letter-spacing: 1px;
+      }
+      >p:last-child{
+        font-size: 40px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+.route_sign{
+  position: relative;
+  padding-bottom: 500px;
+  .sign_up{
+    width:135px;height:50px;
+    line-height: 50px;
+    font-size: 14px;
+    padding:0;
+    margin-top:30px;
+  }
+}
+.route-map{
+  height:800px;
+  @include my_absolute(485px,50%);
+  transform: translateX(-50%);
+  z-index: 2;
+  #gaode-map{
+    width:1200px;
+    height:500px;
+    box-shadow:0 0 30px #e2e2e2;
+  }
+}
+.route_pics{
+  padding-top:180px;
+  padding-bottom:130px;
+  .col-lg-4{
+    padding:10px;
+    img{
+      width:100%;
+      border-radius: 8px;
+    }
+  }
+}

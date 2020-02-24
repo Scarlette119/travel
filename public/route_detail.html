@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>旅行 | 路线详情</title>
+  <link rel="stylesheet" href="static/css/bootstrap.css">
+  <link rel="stylesheet" href="static/css/style.css">
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/popper.min.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+  <script src="static/js/route_detail.js"></script>
+  <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=	33b7f2c2d503b4e08015bd940df47182"></script> 
+</head>
+<body>
+  <header>
+    <div id="nav-header"></div>
+  </header>
+  <section class="content-top-common">
+    <div class="pt-190">
+      <p class="font-44 text-white text-center" id="destination"></p>
+      <p class="text-white text-center mt-30"><span class="long-blue-line mr-3"></span>背上行囊去远方，那个梦寐以求的目的地。<span class="long-blue-line ml-3"></span></p>
+    </div>
+  </section>
+  <section class="route_detail d-flex align-items-center">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col d-flex align-items-center">
+          <article class="word-inner font-13 font-light-black" id="route_intro"></article>
+        </div>
+        <div class="col">
+          <div class="row no-gutters">
+            <div id="guide_pic"></div>
+            <div class="guide_intro">
+              <p class="font-dark-black font-weight-bold font-18">推荐导游</p>
+              <p id="guide_name" class="font-dark-black"></p>
+              <p class="long-gray-line"></p>
+              <article id="guide_intro" class="mt-3 word-inner font-12 font-light-black "></article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="route_info d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>难度系数</p>
+          <p>★ ★ ★ ★</p>
+        </div>
+        <div class="col">
+          <p>全程距离</p>
+          <p id="route_distance"></p>
+        </div>
+        <div class="col">
+          <p>组团人数</p>
+          <p id="route_people"></p>
+        </div>
+        <div class="col">
+          <p>需耗时长</p>
+          <p id="route_duration"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="route_sign">
+    <div class="container">
+      <div class="row pt-60">
+        <div class="col pt-50 pr-5">
+          <div class="d-flex flex-column">
+            <div class="font-13 font-light-black word-inner">
+              当今最领先的响应式自助建站平台，我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。无论您是普通互联网用户， 还是专业网站制作人员，都能使用起飞页设计出最具专业水准的网站。想创建一个简单的单页式站点，还是一个专业的公司网站，亦或是一个别具一格的博客？起飞页可以满足您的所有需求。起飞页提供了海量精美网站模板和成品网站，几乎覆盖了当今各个行业，您只需在模板上进行少量修改，即可完成自己的网站，这一切都是免费的
+            </div>
+            <a href="http://localhost:8080/contact.html" class="btn btn-primary bg-dark-blue sign_up">立即报名</a>
+          </div>
+        </div>
+        <div class="col">
+          <div id="about-question" class="pt-40">
+            <div class="card border-0">
+              <div class="card-header">
+                <h2>
+                  <button class="btn btn-link font-15 font-dark-blue dropdown-toggle"  data-toggle="collapse" data-target="#answer1">
+                    你们提供产品支持吗？
+                  </button>
+                </h2>
+              </div>          
+              <div id="answer1" class="collapse show" data-parent="#about-question">
+              <div class="card-body font-light-black font-13 py-4 pl-3 word-inner">      
+                当今最领先的响应式自助建站平台，我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。
+                </div>
+              </div>
+            </div>
+            <div class="card border-0">
+              <div class="card-header">
+                <h2>
+                  <button class="btn btn-link font-15 font-dark-blue dropdown-toggle collapsed" data-toggle="collapse" data-target="#answer2">
+                    我需要联系谁来获得支持？
+                  </button>
+                </h2>
+              </div>
+              <div id="answer2" class="collapse" data-parent="#about-question">
+                <div class="card-body font-light-black font-13 py-4 pl-3 word-inner">
+                  当今最领先的响应式自助建站平台，我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。
+                </div>
+              </div>
+            </div>
+            <div class="card border-0">
+              <div class="card-header">
+                <h2>
+                  <button class="btn btn-link dropdown-toggle collapsed font-15 font-dark-blue"  data-toggle="collapse" data-target="#answer3">
+                    企业的产品是什么？
+                  </button>
+                </h2>
+              </div>
+              <div id="answer3" class="collapse" data-parent="#about-question">
+                <div class="card-body font-light-black font-13 py-4 pl-3 word-inner">
+                  当今最领先的响应式自助建站平台，我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="route-map">
+        <div id="gaode-map"></div>
+    </div>
+  </section>
+  <section class="route_pics bg-white-blue">
+    <div class="container">
+      <div class="row" id="route_pic"></div>
+    </div>
+  </section>
+  <footer>
+    <div id="footer"></div>
+  </footer>
+  <script src="static/js/map.js"></script>
+
+</body>
+</html>

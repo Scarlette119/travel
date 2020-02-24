@@ -1,0 +1,34 @@
+@import '_base';
+.footer-top,.footer-bottom{
+  background: $dark-black;
+}
+.footer-top{
+  height:322px;
+  .col:last-child{
+    >div{
+      >div{
+        width:64px;height:64px;
+        float: left;
+        background: url('../images/index/social_icon_64.png');
+        background-size: 2360%;
+      }
+      >div:first-child{
+        background: url('../images/index/social_icon_64.png') -319px 0;
+      }
+      >div:nth-child(2){
+        background: url('../images/index/social_icon_64.png') -384px 0;
+      }
+      >div:nth-child(3){
+        background: url('../images/index/social_icon_64.png') -64px 0;
+      }
+    }
+  }
+  ul>li{
+    line-height: 28px;
+  }
+}
+.footer-bottom{
+  height:55px;
+  line-height: 55px;
+  border-top:1px solid #42596e;
+}

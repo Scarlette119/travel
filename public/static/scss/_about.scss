@@ -1,0 +1,71 @@
+@import '_base';
+.about-intro{
+  .col-lg-4{padding-right:40px;}
+}
+.swiper-button-prev,.swiper-button-next{
+  &:after{font-size:1.6rem;}
+}
+.sbn6,.sbp6{
+  width:40px;height:40px;
+  &:after{
+    color:#fff;
+    font-size:1rem;
+  }
+}
+.services{
+  height:600px;
+  .row{
+    height:400px;
+    position: relative;
+    .col-lg-9{
+      height:100%;
+      #s-c6{
+        @extend .col-lg-9;
+        margin-left: 30px;
+      }
+    }
+  }
+  .swiper-slide{
+    padding: 20px;
+    >div{
+      height:100%;
+      background: #fff;
+      overflow: hidden;
+      img{height:auto;transition:all 1s;}
+      p{margin:30px 15px 0;}
+      article{padding:15px 15px 0;}
+    }
+    &:hover{
+      article{color:$light-black;}
+      img{
+        transform: scale(1.1);
+      }
+    }
+  }
+  .swiper-btn-group{@include my_absolute(360px, 200px);}
+  @include my_swiper_button(0, -80px);
+}
+.travel-guides{
+  height:900px;
+  position: relative;
+  .col-lg-3{
+    padding:45px;
+    img{
+      width: 100%;
+      transition: all 1s;
+      &:hover{
+        opacity: 0;
+        +div{
+          opacity: 1;
+        }
+      }
+    }
+    >div{
+      opacity: 0;
+      padding:90px 55px 0;
+      @include my_absolute(0,0);
+      z-index: -1;
+      transition: all 1s;
+    }
+  }
+}

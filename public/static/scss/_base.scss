@@ -1,0 +1,21 @@
+*{margin:0;padding:0;}
+p,h2{margin:0;}
+a{text-decoration: none;}
+ul{list-style: none;margin:0;}
+@mixin my_absolute($top,$left){
+  position:absolute;
+  top:$top;
+  left:$left;
+}
+@mixin my_swiper_button($left,$right){
+  .swiper-button-prev{left:$left;}
+  .swiper-button-next{right:$right;}
+}
+$main-blue:#73baf7;
+$white-blue:#f3faff;
+$dark-blue:#379CF4;
+$light-black:#596e80;
+$light-gray:#ccdae1;
+$gray:#c7dae3;
+$dark-black:#13304a;
+$white-gray:#96A4AF;

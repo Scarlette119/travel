@@ -1,0 +1,23 @@
+.navbar-brand{
+  width:15rem;
+  img{
+    width:12rem;height:3rem;
+  }
+}
+#nav-header>nav{
+    width:100%;
+    min-height:4.5rem;
+    position: fixed;
+    z-index: 999;
+}
+@media (min-width: 768px){
+  .navbar-expand-md .navbar-nav .nav-link{
+    padding-right: 2rem;
+  }
+}
+@media (max-width: 767px){
+  .navbar-expand-md .navbar-nav .nav-link{
+    padding-right: 2rem;
+    text-align: center;
+  }
+}

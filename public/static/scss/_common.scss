@@ -1,0 +1,113 @@
+//导入导航栏和底部scss文件
+@import '_base';
+// @media (min-width: 1200px){
+//   .container {
+//     max-width: 1200px;
+//   }
+// }
+.container{
+  width:1200px !important;
+}
+@media (min-width:576px){
+  .container {
+    max-width: 1200px;
+  }
+}
+.font-12{font-size:12px;}
+.font-13{font-size:13px;}
+.font-14{font-size:14px;}
+.font-15{font-size:15px;}
+.font-18{font-size:18px;}
+.font-20{font-size:20px;}
+.font-24{font-size:24px;}
+.font-28{font-size:28px;}
+.font-44{font-size: 44px;}
+.font-mid{font-size:26px;}
+.font-big{font-size:70px;}
+.mt-30{margin-top:30px;}
+.mt-90{margin-top:90px;}
+.mt-130{margin-top:130px;}
+.mb-30{margin-bottom:30px;}
+.pt-10{padding-top:10px;}
+.pt-25{padding-top:25px;}
+.pt-30{padding-top:30px;}
+.pt-40{padding-top:40px;}
+.pt-50{padding-top:50px;}
+.pt-60{padding-top:60px;}
+.pt-80{padding-top: 80px;}
+.pt-90{padding-top:90px;}
+.pt-100{padding-top: 100px;}
+.pt-110{padding-top: 110px;}
+.pt-190{padding-top: 190px;}
+.pb-70{padding-bottom: 70px;}
+.pb-80{padding-bottom: 80px;}
+.pb-100{padding-bottom: 100px;}
+.pb-210{padding-bottom: 210px;}
+.lh-30{line-height: 30px;}
+.bg-blue{
+  background:$main-blue;
+}
+.bg-dark-blue{
+  background:$dark-blue;
+}
+.font-blue{
+  color:$main-blue;
+}
+.font-dark-blue{
+  color:$dark-blue;
+}
+.bg-white-blue{
+  background:$white-blue;
+}
+.font-light-black{
+  color:$light-black;
+}
+.font-dark-black{
+  color: $dark-black;
+}
+.font-gray{
+  color:$light-gray;
+}
+.font-white-gray{
+  color:$white-gray;
+}
+span.line-blue{
+  display: inline-block;
+  width:28px;
+  border-bottom: 4px solid $dark-blue;
+}
+span.long-blue-line{
+  display: inline-block;
+  width:300px;
+  height:2px;
+  background: $dark-blue;
+  margin-bottom:3px;
+}
+.sub-title{
+  font-size:36px;
+  color:#13304a;
+}
+.card{
+  padding-bottom:1rem;
+  border-bottom: 1px solid $gray !important;
+  background: transparent;
+}
+.card-header{
+  background: transparent;
+  border: none;
+  padding:0;
+}
+.card-body{
+  padding:0;
+}
+.btn-link:focus,.btn-link:hover{
+  text-decoration: none;
+}
+.word-inner{
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+.content-top-common{
+  height:480px;
+  background: url(../images/about/bg_top.png) no-repeat 0px -280px;
+}
