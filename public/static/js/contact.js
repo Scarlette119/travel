@@ -26,45 +26,24 @@ $(function(){
   map.add(marker);
   marker.on('click',onMarkerClick);//绑定click事件
   //键盘摁下，label消失
-  $('#uname').keydown(function(){
-    $('#uname_msg').css('display','none');
-  });
-  $('#mobile').keydown(function(){
-    $('#mobile_msg').css('display','none');
-  });
-  $('#destination').keydown(function(){
-    $('#dest_msg').css('display','none');
-  });
-  $('#people').keydown(function(){
-    $('#people_msg').css('display','none');
-  });
-  $('#comment').keydown(function(){
-    $('#comment_msg').css('display','none');
-  });
+  var labelHide=function(id,msg){
+    $(`#${id}`).keydown(function(){
+      $(`#${msg}`).css('display','none');
+    });
+  }
   //失去焦点，如果输入值不为空，显示提示信息
-  $('#uname').blur(function(){
-    if(!$('#uname').val()){
-      $('#uname_msg').css('display','block');
-    }
-  });
-  $('#mobile').blur(function(){
-    if(!$('#mobile').val()){
-      $('#mobile_msg').css('display','block');
-    }
-  });
-  $('#destination').blur(function(){
-    if(!$('#destination').val()){
-      $('#dest_msg').css('display','block');
-    }
-  });
-  $('#people').blur(function(){
-    if(!$('#people').val()){
-      $('#people_msg').css('display','block');
-    }
-  });
-  $('#comment').blur(function(){
-    if(!$('#comment').val()){
-      $('#comment_msg').css('display','block');
-    }
-  });
+  var msgShow=function(id,msg){
+    $(`#${id}`).blur(function(){
+      if(!$(`#${id}`).val()){
+        $(`#${msg}`).css('display','block');
+      }
+    });
+  }
+  labelHide('uname','uname_msg');
+  labelHide('mobile','mobile_msg');
+  labelHide('destination','dest_msg');
+  labelHide('people','people_msg');
+  labelHide('comment','comment_msg');
+  msgShow('uname','uname_msg');
+  msgShow('mobile','mobile_msg');
 });
